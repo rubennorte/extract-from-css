@@ -16,7 +16,6 @@
     "jasmine": "^2.1.0"
   },
   "dependencies": {
-    "css": "^2.1.0",
-    "css-selector-parser": "^1.0.3"
+    "css": "^2.1.0"
   }
 }

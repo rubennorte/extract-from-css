@@ -1,6 +1,8 @@
 # Extract from CSS
 
-Extract information (class names for now) from CSS code
+Extract information from CSS code.
+
+For now, it extracts class names and ids.
 
 ## Installation
 
@@ -19,12 +21,15 @@ npm install extract-from-css
 var extract = require('extract-from-css');
 var code = '.list-item { background: red; } ' +
     '/* comment */ ' +
+    '#main-header { background: black; } ' +
     '.list-item-title:hover { font-weight: bold}';
-var classNames = extract.extractClasses(code);
+extract.extractClasses(code);
 // [ 'list-item', 'list-item-title' ]
+extract.extractIds(code);
+// [ 'main-header' ]
 ```
 
-Works with nested rules (inside media queries, supports...), complex selectors, escaped characters and unicode symbols (♠, ♥, ★...) in class names. See tests.
+Works with nested rules (inside media queries, supports...), complex selectors and escaped characters and unicode symbols (♠, ♥, ★...) in class names and ids. See tests.
 
 ## Tests
 

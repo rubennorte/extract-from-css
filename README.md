@@ -35,6 +35,12 @@ npm install
 npm test
 ```
 
+To run the benchmark:
+
+```bash
+npm run benchmark
+```
+
 ## Contributing
 
 1. Fork it!

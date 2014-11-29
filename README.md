@@ -19,12 +19,21 @@ npm install extract-from-css
 
 ```javascript
 var extract = require('extract-from-css');
-var code = '.list-item { background: red; } ' +
-    '/* comment */ ' +
-    '#main-header { background: black; } ' +
-    '.list-item-title:hover { font-weight: bold}';
+
+var code = '.list-item { background: red; } \
+  /* comment */ \
+  #main-header { background: black; } \
+  .list-item-title:hover { font-weight: bold; } ';
+
+extract(['ids', 'classes'], code);
+// {
+//   ids: [ 'main-header' ],
+//   classes: [ 'list-item', 'list-item-title' ]
+// }
+
 extract.extractClasses(code);
 // [ 'list-item', 'list-item-title' ]
+
 extract.extractIds(code);
 // [ 'main-header' ]
 ```

@@ -59,7 +59,7 @@ describe('extractClasses', function() {
       var classNames = extractClasses('.\\E9 dition { prop: value; }');
       expect(classNames).toEqualIgnoreOrder(['édition']);
     });
-    it('should extract class names with utf-8 characters', function() {
+    it('should extract class names with unicode characters', function() {
       var classNames = extractClasses('.list-★-item { prop: value; }');
       expect(classNames).toEqualIgnoreOrder(['list-★-item']);
     });

@@ -24,9 +24,7 @@ var classNames = extract.extractClasses(code);
 // [ 'list-item', 'list-item-title' ]
 ```
 
-Works with nested rules (inside media queries, supports...), complex selectors, escaped characters... See tests.
-
-Pending support for UTF-8 symbols (♠, ♥, ★...).
+Works with nested rules (inside media queries, supports...), complex selectors, escaped characters and utf-8 symbols (♠, ♥, ★...) in class names. See tests.
 
 ## Tests
 

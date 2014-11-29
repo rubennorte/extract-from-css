@@ -4,21 +4,23 @@
   "description": "Extract information from CSS code",
   "main": "lib/index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/rubennorte/extract-from-css.git"
+    "type": "git",
+    "url": "https://github.com/rubennorte/extract-from-css.git"
   },
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "benchmark": "node test/benchmark.js"
   },
   "author": "Rubén Norte <rubennorte@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "jasmine": "^2.1.0"
+    "jasmine": "^2.1.0",
+    "benchmark": "^1.0.0"
   },
   "dependencies": {
     "css": "^2.1.0"
   },
   "engines": {
-    "node" : ">=0.10.0"
+    "node": ">=0.10.0"
   }
 }

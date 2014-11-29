@@ -59,19 +59,23 @@ describe('extractClasses', function() {
       var classNames = extractClasses('.\\E9 dition { prop: value; }');
       expect(classNames).toEqualIgnoreOrder(['édition']);
     });
+    it('should extract class names with utf-8 characters', function() {
+      var classNames = extractClasses('.list-★-item { prop: value; }');
+      expect(classNames).toEqualIgnoreOrder(['list-★-item']);
+    });
   });
 
   describe('extract class names from complex selectors', function() {
     it('should extract class names at the beginning of a complex selector', function() {
-      var classNames = extractClasses('.class-name#identifier[attr]:hover:after { prop: value; }');
+      var classNames = extractClasses('.class-name * > tag ~ [attr~="test"] + #identifier:hover:after { prop: value; }');
       expect(classNames).toEqualIgnoreOrder(['class-name']);
     });
     it('should extract class names at the middle of a complex selector', function() {
-      var classNames = extractClasses('#identifier[attr].class-name:hover:after { prop: value; }');
+      var classNames = extractClasses('* > tag ~ [attr~="test"].class-name + #identifier:hover:after { prop: value; }');
       expect(classNames).toEqualIgnoreOrder(['class-name']);
     });
     it('should extract class names at the end of a complex selector', function() {
-      var classNames = extractClasses('#identifier[attr]:hover:after.class-name { prop: value; }');
+      var classNames = extractClasses('* > tag ~ [attr~="test"] + #identifier:hover:after.class-name { prop: value; }');
       expect(classNames).toEqualIgnoreOrder(['class-name']);
     });
     it('should extract several class names in the same selector', function() {

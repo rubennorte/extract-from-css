@@ -4,7 +4,7 @@ Extract information (class names for now) from CSS code
 
 ## Installation
 
-Depencencies:
+Dependencies:
 
 * node >=0.8.0
 * npm >= 1.3.7

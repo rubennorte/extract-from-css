@@ -1,0 +1,22 @@
+{
+  "name": "extract-from-css",
+  "version": "0.1.0",
+  "description": "Extract information from CSS code",
+  "main": "lib/index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/rubennorte/extract-from-css.git"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Rubén Norte <rubennorte@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^2.1.0"
+  },
+  "dependencies": {
+    "css": "^2.1.0",
+    "css-selector-parser": "^1.0.3"
+  }
+}

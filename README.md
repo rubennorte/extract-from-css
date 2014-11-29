@@ -4,6 +4,11 @@ Extract information (class names for now) from CSS code
 
 ## Installation
 
+Depencencies:
+
+* node >=0.8.0
+* npm >= 1.3.7
+
 ```bash
 npm install extract-from-css
 ```

@@ -14,7 +14,7 @@ describe('extractClasses', function() {
       expect(classNames).toEqualIgnoreOrder(['className']);
     });
 
-    it('should several class names with alphabetical letters', function() {
+    it('should extract several class names with alphabetical letters', function() {
       var classNames = extractClasses('.className1 { prop: value; } .className2 { prop: value; }');
       expect(classNames).toEqualIgnoreOrder(['className1', 'className2']);
     });

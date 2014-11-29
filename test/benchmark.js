@@ -4,7 +4,9 @@ var path = require('path');
 
 var Benchmark = require('benchmark');
 
-var extractClasses = require('../').extractClasses;
+var extract = require('../');
+var extractClasses = extract.extractClasses;
+var extractIds = extract.extractIds;
 
 var suite = new Benchmark.Suite();
 var samplesDir = path.join(__dirname, 'samples');
@@ -15,6 +17,11 @@ var samples = fs.readdirSync(samplesDir).map(function(sampleFile) {
 samples.forEach(function(sample, index) {
   suite.add('extractClasses from sample #' + index, function() {
     extractClasses(sample);
+  });
+});
+samples.forEach(function(sample, index) {
+  suite.add('extractIds from sample #' + index, function() {
+    extractIds(sample);
   });
 });
 

@@ -13,7 +13,7 @@ var samples = fs.readdirSync(samplesDir).map(function(sampleFile) {
 });
 
 samples.forEach(function(sample, index) {
-  suite.add('extractClasses from sample ' + index, function() {
+  suite.add('extractClasses from sample #' + index, function() {
     extractClasses(sample);
   });
 });

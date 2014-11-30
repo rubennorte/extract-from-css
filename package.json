@@ -10,7 +10,8 @@
   "scripts": {
     "test": "jasmine",
     "benchmark": "node test/benchmark.js",
-    "jshint": "jshint ."
+    "jshint": "jshint .",
+    "build": "npm run jshint && npm test"
   },
   "author": "Rubén Norte <rubennorte@gmail.com>",
   "license": "MIT",

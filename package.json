@@ -7,6 +7,7 @@
     "type": "git",
     "url": "https://github.com/rubennorte/extract-from-css.git"
   },
+  "bugs": "https://github.com/rubennorte/extract-from-css/issues",
   "scripts": {
     "test": "jasmine",
     "benchmark": "node test/benchmark.js",

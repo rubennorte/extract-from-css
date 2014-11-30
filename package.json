@@ -9,13 +9,15 @@
   },
   "scripts": {
     "test": "jasmine",
-    "benchmark": "node test/benchmark.js"
+    "benchmark": "node test/benchmark.js",
+    "jshint": "jshint ."
   },
   "author": "Rubén Norte <rubennorte@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "jasmine": "^2.1.0",
-    "benchmark": "^1.0.0"
+    "benchmark": "^1.0.0",
+    "jshint": "^2.5.10"
   },
   "dependencies": {
     "css": "^2.1.0"

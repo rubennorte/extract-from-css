@@ -37,6 +37,6 @@ var matcher = {
       compare: compareIgnoreOrder
     };
   }
-}
+};
 
 module.exports = matcher;

@@ -35,17 +35,6 @@ describe('extractIds', function() {
     });
   });
 
-  describe('extract ids from nested rules', function() {
-    it('should extract ids inside a media query', function() {
-      var ids = extractIds('@media (max-width: 500px) { #id { prop: value; } }');
-      expect(ids).toEqualIgnoreOrder(['id']);
-    });
-    it('should extract ids inside two media queries', function() {
-      var ids = extractIds('@media (max-width: 500px) { @media screen { #id { prop: value; } } }');
-      expect(ids).toEqualIgnoreOrder(['id']);
-    });
-  });
-
   describe('extract complex ids', function() {
     it('should extract ids with single escaped characters', function() {
       var ids = extractIds('#hello-\\#-world { prop: value; }');
@@ -81,29 +70,6 @@ describe('extractIds', function() {
     it('should extract several ids in the same selector', function() {
       var ids = extractIds('#id-1#id { prop: value; }');
       expect(ids).toEqualIgnoreOrder(['id-1', 'id']);
-    });
-  });
-
-  describe('ignore everthing but selectors', function() {
-    it('should ignore ids in declaration blocks', function() {
-      // .png looks like a class selector
-      var ids = extractIds('#id { prop: url("something#id.png") }');
-      expect(ids).toEqualIgnoreOrder(['id']);
-    });
-
-    it('should ignore ids in regular comments', function() {
-      var ids = extractIds('/* #id {} */ #id1 {}');
-      expect(ids).toEqualIgnoreOrder(['id1']);
-    });
-
-    it('should ignore ids in multi-line comments', function() {
-      var ids = extractIds('/* #id {} \n #id1 {} */ #id2 {}');
-      expect(ids).toEqualIgnoreOrder(['id2']);
-    });
-
-    it('should ignore ids in comments between selectors', function() {
-      var ids = extractIds('#id, /* #id1 */ #id2 {}');
-      expect(ids).toEqualIgnoreOrder(['id', 'id2']);
     });
   });
 

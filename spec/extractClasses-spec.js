@@ -35,17 +35,6 @@ describe('extractClasses', function() {
     });
   });
 
-  describe('extract class names from nested rules', function() {
-    it('should extract class names inside a media query', function() {
-      var classNames = extractClasses('@media (max-width: 500px) { .className { prop: value; } }');
-      expect(classNames).toEqualIgnoreOrder(['className']);
-    });
-    it('should extract class names inside two media queries', function() {
-      var classNames = extractClasses('@media (max-width: 500px) { @media screen { .className { prop: value; } } }');
-      expect(classNames).toEqualIgnoreOrder(['className']);
-    });
-  });
-
   describe('extract complex class names', function() {
     it('should extract class names with single escaped characters', function() {
       var classNames = extractClasses('.hello-\\#-world { prop: value; }');
@@ -81,29 +70,6 @@ describe('extractClasses', function() {
     it('should extract several class names in the same selector', function() {
       var classNames = extractClasses('.class-name-1.class-name { prop: value; }');
       expect(classNames).toEqualIgnoreOrder(['class-name-1', 'class-name']);
-    });
-  });
-
-  describe('ignore everthing but selectors', function() {
-    it('should ignore class names in declaration blocks', function() {
-      // .png looks like a class selector
-      var classNames = extractClasses('.className { prop: url("something.png") }');
-      expect(classNames).toEqualIgnoreOrder(['className']);
-    });
-
-    it('should ignore class names in regular comments', function() {
-      var classNames = extractClasses('/* .className {} */ .className1 {}');
-      expect(classNames).toEqualIgnoreOrder(['className1']);
-    });
-
-    it('should ignore class names in multi-line comments', function() {
-      var classNames = extractClasses('/* .className {} \n .className1 {} */ .className2 {}');
-      expect(classNames).toEqualIgnoreOrder(['className2']);
-    });
-
-    it('should ignore class names in comments between selectors', function() {
-      var classNames = extractClasses('.className, /* .className1 */ .className2 {}');
-      expect(classNames).toEqualIgnoreOrder(['className', 'className2']);
     });
   });
 

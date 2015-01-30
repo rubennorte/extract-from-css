@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.1
+
+Improvements:
+  
+  - Simplified tests
+  - Other minor internal improvements (documentation and configuration)
+
 ## 0.4.0
 
 Features:

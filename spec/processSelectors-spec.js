@@ -1,31 +1,52 @@
 
-var assertProcessArguments = require('./helpers/assert-process-arguments');
+var css = require('css');
+var processSelectors = require('../lib/process-selectors');
+
+function getRulesFromCode(code) {
+  return css.parse(code).stylesheet.rules;
+}
 
 describe('processSelectors', function() {
 
+  var processSelector;
+
+  beforeEach(function() {
+    processSelector = jasmine.createSpy('processSelector');
+  });
+
   it('should process a single selector', function() {
-    assertProcessArguments('.className {}',
-        [['.className']]);
+    var cssCode = '.className {}';
+    var rules = getRulesFromCode(cssCode);
+    processSelectors(rules, processSelector);
+    expect(processSelector.calls.allArgs()).toEqual([['.className']]);
   });
 
   it('should process multiple selectors', function() {
-    assertProcessArguments('.className {} .className2 {}',
-        [['.className'], ['.className2']]);
+    var cssCode = '.className {} .className2 {}';
+    var rules = getRulesFromCode(cssCode);
+    processSelectors(rules, processSelector);
+    expect(processSelector.calls.allArgs()).toEqual([['.className'], ['.className2']]);
   });
 
   it('should ignore selectors inside comments', function() {
-    assertProcessArguments('.className {} /* .className2 {} */',
-        [['.className']]);
+    var cssCode = '.className {} /* .className2 {} */';
+    var rules = getRulesFromCode(cssCode);
+    processSelectors(rules, processSelector);
+    expect(processSelector.calls.allArgs()).toEqual([['.className']]);
   });
 
   it('should ignore string contents', function() {
-    assertProcessArguments('.className { background-image: url(".className2 { prop: value; }"); }',
-        [['.className']]);
+    var cssCode = '.className { background-image: url(".className2 { prop: value; }"); }';
+    var rules = getRulesFromCode(cssCode);
+    processSelectors(rules, processSelector);
+    expect(processSelector.calls.allArgs()).toEqual([['.className']]);
   });
 
   it('should process nested selectors', function() {
-    assertProcessArguments('@media (max-width: 500px) { @media screen { .className { prop: value; } } }',
-        [['.className']]);
+    var cssCode = '@media (max-width: 500px) { @media screen { .className { prop: value; } } }';
+    var rules = getRulesFromCode(cssCode);
+    processSelectors(rules, processSelector);
+    expect(processSelector.calls.allArgs()).toEqual([['.className']]);
   });
 
 });

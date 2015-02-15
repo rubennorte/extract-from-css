@@ -9,7 +9,7 @@
   },
   "bugs": "https://github.com/rubennorte/extract-from-css/issues",
   "scripts": {
-    "test": "jasmine",
+    "test": "istanbul cover jasmine",
     "benchmark": "node test/benchmark.js",
     "jshint": "jshint .",
     "build": "npm run jshint && npm test"
@@ -17,8 +17,9 @@
   "author": "Rubén Norte <rubennorte@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "jasmine": "^2.1.0",
     "benchmark": "^1.0.0",
+    "istanbul": "^0.3.5",
+    "jasmine": "2.1.1",
     "jshint": "^2.5.10"
   },
   "dependencies": {

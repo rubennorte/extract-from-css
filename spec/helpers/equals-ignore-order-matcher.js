@@ -1,7 +1,9 @@
 
 function inArray(array, el) {
   for (var i = array.length; i--;) {
-    if (array[i] === el) return true;
+    if (array[i] === el) {
+      return true;
+    }
   }
   return false;
 }
@@ -10,7 +12,7 @@ function equalsIgnoreOrder(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
   }
-  for (var i = arr1.length; i--; ) {
+  for (var i = arr1.length; i--;) {
     if (!inArray(arr2, arr1[i])) {
       return false;
     }

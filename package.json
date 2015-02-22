@@ -12,7 +12,8 @@
     "test": "istanbul cover jasmine",
     "benchmark": "node test/benchmark.js",
     "jshint": "jshint .",
-    "build": "npm run jshint && npm test"
+    "jscs": "jscs .",
+    "build": "npm run jscs && npm run jshint && npm test"
   },
   "author": "Rubén Norte <rubennorte@gmail.com>",
   "license": "MIT",
@@ -20,6 +21,7 @@
     "benchmark": "^1.0.0",
     "istanbul": "^0.3.5",
     "jasmine": "2.1.1",
+    "jscs": "^1.11.3",
     "jshint": "^2.5.10"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "extract-from-css",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Extract information from CSS code",
   "main": "lib/index.js",
   "repository": {

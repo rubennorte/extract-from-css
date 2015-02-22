@@ -15,6 +15,10 @@
     "benchmark": "node test/benchmark.js",
     "build": "npm test"
   },
+  "files": [
+    "lib",
+    "CHANGELOG.md"
+  ],
   "author": "Rubén Norte <rubennorte@gmail.com>",
   "license": "MIT",
   "devDependencies": {

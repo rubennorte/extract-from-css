@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/rubennorte/extract-from-css.svg?branch=master)](https://travis-ci.org/rubennorte/extract-from-css)
 [![Coverage Status](https://coveralls.io/repos/rubennorte/extract-from-css/badge.svg)](https://coveralls.io/r/rubennorte/extract-from-css)
+[![Dependency Status](https://david-dm.org/rubennorte/extract-from-css.svg?theme=shields.io&style=flat)](https://david-dm.org/rubennorte/extract-from-css)
+[![devDependency Status](https://david-dm.org/rubennorte/extract-from-css/dev-status.svg?theme=shields.io&style=flat)](https://david-dm.org/rubennorte/extract-from-css#info=devDependencies)
 
 # Extract from CSS
 

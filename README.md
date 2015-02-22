@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/rubennorte/extract-from-css.svg?branch=master)](https://travis-ci.org/rubennorte/extract-from-css)
+[![Coverage Status](https://coveralls.io/repos/rubennorte/extract-from-css/badge.svg)](https://coveralls.io/r/rubennorte/extract-from-css)
 
 # Extract from CSS
 

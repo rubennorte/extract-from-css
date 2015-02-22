@@ -11,9 +11,11 @@
   "scripts": {
     "lint": "jscs . && jshint .",
     "pretest": "npm run lint",
-    "test": "istanbul cover jasmine",
+    "test": "jasmine",
+    "coverage": "istanbul cover jasmine",
     "benchmark": "node test/benchmark.js",
-    "build": "npm test"
+    "build": "npm test",
+    "travis": "npm run coverage && cat ./output/coverage/lcov.info | coveralls && rm -rf ./output/coverage"
   },
   "files": [
     "lib",
@@ -23,6 +25,7 @@
   "license": "MIT",
   "devDependencies": {
     "benchmark": "^1.0.0",
+    "coveralls": "^2.11.2",
     "istanbul": "^0.3.5",
     "jasmine": "2.1.1",
     "jscs": "^1.11.3",

@@ -63,7 +63,7 @@ npm run benchmark
 To check the code:
 
 ```bash
-npm run jshint
+npm run lint
 ```
 
 ## Contributing

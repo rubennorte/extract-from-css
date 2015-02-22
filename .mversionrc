@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "postcommit": "git push origin master && git push origin --tags && npm publish",
+    "postcommit": "git push origin master && git push origin --tags && npm publish"
   }
 }

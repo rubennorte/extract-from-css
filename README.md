@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rubennorte/extract-from-css.svg?branch=master)](https://travis-ci.org/rubennorte/extract-from-css)
+
 # Extract from CSS
 
 Extract information from CSS code.

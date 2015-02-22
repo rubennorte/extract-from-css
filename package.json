@@ -9,11 +9,11 @@
   },
   "bugs": "https://github.com/rubennorte/extract-from-css/issues",
   "scripts": {
+    "lint": "jscs . && jshint .",
+    "pretest": "npm run lint",
     "test": "istanbul cover jasmine",
     "benchmark": "node test/benchmark.js",
-    "jshint": "jshint .",
-    "jscs": "jscs .",
-    "build": "npm run jscs && npm run jshint && npm test"
+    "build": "npm test"
   },
   "author": "Rubén Norte <rubennorte@gmail.com>",
   "license": "MIT",

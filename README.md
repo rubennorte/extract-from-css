@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/v/extract-from-css.svg)](https://npmjs.org/package/extract-from-css)
+[![npm](https://img.shields.io/npm/l/extract-from-css.svg)](https://npmjs.org/package/extract-from-css)  
 [![Build Status](https://travis-ci.org/rubennorte/extract-from-css.svg?branch=master)](https://travis-ci.org/rubennorte/extract-from-css)
 [![Coverage Status](https://coveralls.io/repos/rubennorte/extract-from-css/badge.svg)](https://coveralls.io/r/rubennorte/extract-from-css)
 [![Dependency Status](https://david-dm.org/rubennorte/extract-from-css.svg?theme=shields.io&style=flat)](https://david-dm.org/rubennorte/extract-from-css)

@@ -1,20 +1,10 @@
 {
   "preset": "google",
-  "fileExtensions": [".js"],
-
-  "requireParenthesesAroundIIFE": true,
-  "maximumLineLength": 120,
-  "validateIndentation": 2,
-
-  "disallowKeywords": ["with"],
-  "disallowSpacesInsideObjectBrackets": null,
-  "disallowImplicitTypeConversion": ["string"],
+  "maximumLineLength": 80,
   "disallowMultipleVarDecl": null,
-
-  "safeContextKeyword": "_this",
-
   "excludeFiles": [
     "node_modules/**",
-    "output/**"
+    "output/**",
+    "spec/**"
   ]
 }

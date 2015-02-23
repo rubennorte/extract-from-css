@@ -9,7 +9,7 @@
   },
   "bugs": "https://github.com/rubennorte/extract-from-css/issues",
   "scripts": {
-    "lint": "jscs . && jshint .",
+    "lint": "jscs . && jscs ./spec && jshint .",
     "pretest": "npm run lint",
     "test": "jasmine",
     "coverage": "istanbul cover jasmine",

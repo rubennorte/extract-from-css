@@ -15,8 +15,9 @@ For now, it extracts class names and ids.
 
 Dependencies:
 
-* node >=0.8.0
-* npm >= 1.3.7
+* node >= 0.10
+* npm >= 1.3.7 (package usage)
+* npm >= 2.0.0 (package development)
 
 ```bash
 npm install extract-from-css

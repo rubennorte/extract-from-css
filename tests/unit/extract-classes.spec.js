@@ -42,15 +42,15 @@ describe('extractClasses', function() {
     });
     it('should extract class names with multiple escaped characters', function() {
       var classes = extractClasses('.\\0000E9dition { prop: value; }');
-      expect(classes).toEqualIgnoreOrder(['édition']);
+      expect(classes).toEqualIgnoreOrder(['\xE9dition']);
     });
     it('should extract class names from multiple escaped characters with white space', function() {
       var classes = extractClasses('.\\E9 dition { prop: value; }');
-      expect(classes).toEqualIgnoreOrder(['édition']);
+      expect(classes).toEqualIgnoreOrder(['\xE9dition']);
     });
     it('should extract class names with unicode characters', function() {
-      var classes = extractClasses('.list-★-item { prop: value; }');
-      expect(classes).toEqualIgnoreOrder(['list-★-item']);
+      var classes = extractClasses('.list-\u2605-item { prop: value; }');
+      expect(classes).toEqualIgnoreOrder(['list-\u2605-item']);
     });
   });
 

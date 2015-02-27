@@ -43,17 +43,17 @@ describe('extractIds', function() {
 
     it('should extract ids with multiple escaped characters', function() {
       var ids = extractIds('#\\0000E9dition { prop: value; }');
-      expect(ids).toEqualIgnoreOrder(['édition']);
+      expect(ids).toEqualIgnoreOrder(['\xE9dition']);
     });
 
     it('should extract ids from multiple escaped characters with white space', function() {
       var ids = extractIds('#\\E9 dition { prop: value; }');
-      expect(ids).toEqualIgnoreOrder(['édition']);
+      expect(ids).toEqualIgnoreOrder(['\xE9dition']);
     });
 
     it('should extract ids with unicode characters', function() {
-      var ids = extractIds('#list-★-item { prop: value; }');
-      expect(ids).toEqualIgnoreOrder(['list-★-item']);
+      var ids = extractIds('#list-\u2605-item { prop: value; }');
+      expect(ids).toEqualIgnoreOrder(['list-\u2605-item']);
     });
   });
 

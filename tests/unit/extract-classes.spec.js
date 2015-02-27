@@ -1,6 +1,6 @@
 
-var extractClasses = require('..').extractClasses;
-var equalsIgnoreOrderMatcher = require('./helpers/equals-ignore-order-matcher');
+var extractClasses = require('../..').extractClasses;
+var equalsIgnoreOrderMatcher = require('../helpers/equals-ignore-order-matcher');
 
 describe('extractClasses', function() {
 

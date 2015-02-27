@@ -1,6 +1,6 @@
 
-var extractIds = require('..').extractIds;
-var equalsIgnoreOrderMatcher = require('./helpers/equals-ignore-order-matcher');
+var extractIds = require('../..').extractIds;
+var equalsIgnoreOrderMatcher = require('../helpers/equals-ignore-order-matcher');
 
 describe('extractIds', function() {
 

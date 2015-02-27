@@ -1,5 +1,5 @@
 
-var extract = require('..');
+var extract = require('../..');
 
 describe('extract', function() {
 

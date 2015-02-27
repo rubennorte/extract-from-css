@@ -1,6 +1,6 @@
 
 var css = require('css');
-var processSelectors = require('../lib/process-selectors');
+var processSelectors = require('../../lib/process-selectors');
 
 function getRulesFromCode(code) {
   return css.parse(code).stylesheet.rules;

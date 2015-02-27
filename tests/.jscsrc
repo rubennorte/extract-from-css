@@ -1,9 +1,8 @@
 {
   "preset": "google",
-  "maximumLineLength": 80,
+  "maximumLineLength": null,
   "disallowMultipleVarDecl": null,
   "excludeFiles": [
-    "node_modules/**",
-    "tests/**"
+    "output/**"
   ]
 }

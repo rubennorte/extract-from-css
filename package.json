@@ -9,13 +9,13 @@
   },
   "bugs": "https://github.com/rubennorte/extract-from-css/issues",
   "scripts": {
-    "lint": "jscs . && jscs ./spec && jshint .",
+    "lint": "jscs . && jscs ./tests && jshint .",
     "pretest": "npm run lint",
-    "test": "jasmine",
-    "coverage": "istanbul cover jasmine",
-    "benchmark": "node test/benchmark.js",
+    "test": "JASMINE_CONFIG_PATH=tests/jasmine.json jasmine",
+    "coverage": "JASMINE_CONFIG_PATH=tests/jasmine.json istanbul cover jasmine",
+    "benchmark": "node tests/benchmark/benchmark.js",
     "build": "npm test",
-    "travis": "npm run coverage && cat ./output/coverage/lcov.info | coveralls && rm -rf ./output/coverage",
+    "travis": "npm run coverage && cat ./tests/output/coverage/lcov.info | coveralls && rm -rf ./tests/output/coverage",
     "release": "npm run build && mversion -m \"New version: %s\" "
   },
   "files": [

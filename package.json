@@ -9,7 +9,9 @@
   },
   "bugs": "https://github.com/rubennorte/extract-from-css/issues",
   "scripts": {
-    "lint": "jscs . && jscs ./tests && jshint .",
+    "lint": "npm run lint:errors && npm run lint:style",
+    "lint:errors": "jshint lib tests/unit tests/helpers",
+    "lint:style": "jscs lib && cd tests && jscs unit helpers",
     "pretest": "npm run lint",
     "test": "JASMINE_CONFIG_PATH=tests/jasmine.json jasmine",
     "coverage": "JASMINE_CONFIG_PATH=tests/jasmine.json istanbul cover jasmine",

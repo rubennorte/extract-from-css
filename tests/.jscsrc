@@ -1,8 +1,5 @@
 {
   "preset": "google",
-  "maximumLineLength": null,
-  "disallowMultipleVarDecl": null,
-  "excludeFiles": [
-    "output/**"
-  ]
+  "disallowMultipleVarDecl": "exceptUndefined",
+  "maximumLineLength": null
 }

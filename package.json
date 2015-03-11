@@ -13,8 +13,8 @@
     "lint:errors": "jshint lib tests/unit tests/helpers",
     "lint:style": "jscs lib && cd tests && jscs unit helpers",
     "pretest": "npm run lint",
-    "test": "JASMINE_CONFIG_PATH=tests/jasmine.json jasmine",
-    "coverage": "JASMINE_CONFIG_PATH=tests/jasmine.json istanbul cover jasmine",
+    "test": "node tests/unit.js",
+    "coverage": "istanbul cover tests/unit.js",
     "benchmark": "node tests/benchmark/benchmark.js",
     "build": "npm test",
     "travis": "npm run coverage && cat ./tests/output/coverage/lcov.info | coveralls && rm -rf ./tests/output/coverage",
@@ -31,6 +31,7 @@
     "coveralls": "^2.11.2",
     "istanbul": "^0.3.5",
     "jasmine": "^2.2.1",
+    "jasmine-spec-reporter": "^2.1.0",
     "jscs": "^1.11.3",
     "jshint": "^2.5.10",
     "mversion": "^1.9.0"

@@ -34,7 +34,7 @@
     "jasmine-spec-reporter": "^2.1.0",
     "jscs": "^1.11.3",
     "jshint": "^2.5.10",
-    "mversion": "^1.9.0"
+    "mversion": "^2.0.0"
   },
   "dependencies": {
     "css": "^2.1.0"
